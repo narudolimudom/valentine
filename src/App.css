@@ -1,38 +1,359 @@
-.App {
-  text-align: center;
+.bouquet-img-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 18px 0 10px 0;
 }
 
-.App-logo {
-  height: 40vmin;
+
+.bouquet-img {
+  width: 340px;
+  max-width: 98vw;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  background: #fffbe9;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .bouquet-img {
+    width: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .bouquet-img {
+    width: 140px;
+  }
+}
+.container.fade-out, .menu-wrapper.fade-out {
+  opacity: 0;
+  transition: opacity 0.6s;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container.fade-in, .menu-wrapper.fade-in {
+  opacity: 1;
+  transition: opacity 0.6s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.menu-wrapper {
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #fae1dd;
+  opacity: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.menu-page {
+  background: #fff;
+  padding: 40px 60px;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  text-align: center;
+  font-size: 2rem;
+  color: #d62828;
+  min-width: 300px;
+  position: relative;
+  overflow: hidden;
+  max-width: 95vw;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card-message {
+  background: rgba(255,255,255,0.95);
+  border-radius: 18px;
+  padding: 32px 24px 24px 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  display: inline-block;
+  margin: 0 auto;
+  max-width: 90vw;
+  box-sizing: border-box;
+}
+
+.flowers-row {
+  margin: 12px 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 2.2rem;
+  flex-wrap: wrap;
+}
+
+.flowers-row.bouquets {
+  margin-top: 24px;
+  font-size: 2.8rem;
+}
+@media (max-width: 900px) {
+  .menu-page {
+    padding: 24px 4vw;
+    font-size: 1.3rem;
+    min-width: unset;
+    border-radius: 16px;
   }
-  to {
-    transform: rotate(360deg);
+  .card-message {
+    padding: 18px 4vw 16px 4vw;
+    font-size: 1.1rem;
+    border-radius: 12px;
+  }
+  .flowers-row {
+    font-size: 1.5rem;
+    gap: 7px;
+  }
+  .flowers-row.bouquets {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-page {
+    padding: 10px 2vw;
+    font-size: 1rem;
+    min-width: unset;
+    border-radius: 8px;
+  }
+  .card-message {
+    padding: 10px 2vw 10px 2vw;
+    font-size: 0.95rem;
+    border-radius: 8px;
+  }
+  .flowers-row {
+    font-size: 1rem;
+    gap: 3px;
+  }
+  .flowers-row.bouquets {
+    font-size: 1.2rem;
+  }
+}
+
+.flower, .bouquet {
+  transition: transform 0.3s;
+}
+.flower:hover, .bouquet:hover {
+  transform: scale(1.3) rotate(-10deg);
+  filter: brightness(1.2);
+}
+
+
+
+.container {
+  position: relative;
+}
+
+.valentines {
+  position: relative;
+  top:50px;
+  cursor: pointer;
+  animation: up 3s linear infinite;
+}
+
+@keyframes up {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+.envelope {
+  position: relative;
+  width: 300px;
+  height:200px;
+  background-color: #f08080; 
+}
+
+.envelope:before {
+  background-color: #f08080; 
+  content:"";
+  position: absolute;
+  width: 212px;
+  height: 212px;
+  transform: rotate(45deg);
+  top:-105px;
+  left:44px;
+  border-radius:30px 0 0 0;
+}
+
+.card {
+  position: absolute;
+  background-color: #eae2b7;
+  width: 270px;
+  height: 170px;
+  top:5px;
+  left:15px;
+  box-shadow: -5px -5px 100px rgba(0,0,0,0.4); 
+  transition: top 0.6s;
+}
+
+.card:before {
+  content:"";
+  position: absolute;
+  border:3px solid #003049;
+  border-style: dotted;
+  width: 240px;
+  heighT: 140px;
+  left:12px;
+  top:12px;
+}
+
+.text {
+  position: absolute;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 28px;
+  text-align: center;
+  line-height:25px;
+  top:19px;
+  left:85px;
+  color: #003049;
+}
+
+.heart {
+  background-color: #d62828;
+  display: inline-block;
+  height: 30px;
+  margin: 0 10px;
+  position: relative;
+  top: 110px;
+  left:105px;
+  transform: rotate(-45deg);
+  width: 30px;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: #d62828;
+  border-radius: 50%;
+  height: 30px;
+  position: absolute;
+  width: 30px;
+}
+
+.heart:before {
+  top: -15px;
+  left: 0;
+}
+
+.heart:after {
+  left: 15px;
+  top: 0;
+}
+
+.hearts {
+  position: absolute;  
+}
+
+.one, .two, .three, .four, .five {
+  background-color: red;
+  display: inline-block;
+  height: 10px;
+  margin: 0 10px;
+  position: relative;
+  transform: rotate(-45deg);
+  width: 10px;
+  top:50px;
+}
+
+.one:before,
+.one:after, .two:before, .two:after, .three:before, .three:after, .four:before, .four:after, .five:before, .five:after {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  height: 10px;
+  position: absolute;
+  width: 10px;
+}
+
+.one:before, .two:before, .three:before, .four:before, .five:before {
+  top: -5px;
+  left: 0;
+}
+
+.one:after, .two:after, .three:after, .four:after, .five:after {
+  left: 5px;
+  top: 0;
+}
+  
+.one {
+  left:10px;
+  animation: heart 1s ease-out infinite; 
+}
+
+.two {
+  left:30px;
+  animation: heart 2s ease-out infinite; 
+}
+
+.three {
+  left:50px;
+  animation: heart 1.5s ease-out infinite;
+}
+
+.four {
+  left:70px;
+  animation: heart 2.3s ease-out infinite;
+}
+
+.five {
+  left:90px;
+  animation: heart 1.7s ease-out infinite;
+}
+
+@keyframes heart {
+  0%{
+    transform: translateY(0) rotate(-45deg) scale(0.3);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(-150px) rotate(-45deg) scale(1.3);
+    opacity: 0.5;
+  }
+}
+
+.front {
+  position: absolute;
+  border-right: 180px solid #f4978e;
+  border-top: 95px solid transparent;
+  border-bottom: 100px solid transparent;
+  left:120px;
+  top:5px;
+  width:0;
+  height:0;
+  z-index:10;
+}
+
+.front:before {
+  position: absolute;
+  content:"";
+  border-left: 300px solid #f8ad9d;
+  border-top: 195px solid transparent;
+  left:-120px;
+  top:-95px;
+  width:0;
+  height:0;
+}
+
+.shadow {
+  position: absolute;
+  width: 330px;
+  height: 25px;
+  border-radius:50%;
+  background-color: rgba(0,0,0,0.3);
+  top:265px;
+  left:-15px;
+  animation: scale 3s linear infinite;
+  z-index:-1;
+}
+
+@keyframes scale {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.85);
   }
 }
