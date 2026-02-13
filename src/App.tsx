@@ -34,13 +34,13 @@ const App: React.FC = () => {
           className={`container${fade ? ' ' + fade : ''}`}
           onMouseOver={handleMouseOver}
           onMouseLeave={handleMouseLeave}
-          onClick={handleClick}
+
           style={{ cursor: 'pointer' }}
         >
           <div className="valentines">
             <div className="envelope"></div>
             <div className="front"></div>
-            <div className="card" style={{ top: cardTop }}>
+            <div className="card" onClick={handleClick} style={{ top: cardTop }}>
               <div className="text">Happy<br />Valentine's<br />Day!</div>
               <div className="heart"></div>
             </div>
