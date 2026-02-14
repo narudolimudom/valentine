@@ -5,16 +5,13 @@ const Menu: React.FC = () => {
   return (
     <div className="menu-page flower-bg">
       <div className="card-message">
-        <h1> Happy Valentine's Day! </h1>
-        <p>ถึงฝนนะคับ<br/>เรามีดอกไม้มาให้คับ</p>
-        <p>อยากให้ฝนยิ้มเยอะ ๆ ขอให้ลืมเรื่องที่ไม่อยากจำ</p>
-        <p>เราอยู่ตรงนี้เสมอนะ</p>
+        <h1>💐 Happy Valentine's Day! 💐</h1>
+        <p>Wishing you a day filled with love, joy, and lots of beautiful moments.<br/>Here is a bouquet for you!</p>
         <div className="bouquet-img-wrap">
         <img
           src={require('../assets/v1058-19.jpg')}
           alt="Bouquet of flowers"
           className="bouquet-img"
-          style={{ width: '220px', height: 'auto', maxWidth: '100%' }}
         />
         </div>
         <div className="flowers-row">
