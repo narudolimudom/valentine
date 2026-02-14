@@ -6,7 +6,7 @@ const Menu: React.FC = () => {
     <div className="menu-page flower-bg">
       <div className="card-message">
         <h1>💐 Happy Valentine's Day! 💐</h1>
-        <p>Wishing you a day filled with love, joy, and lots of beautiful moments.<br/>Here is a bouquet for you!</p>
+        <p>Wishing you a day filled with love, joy, and lots of beautiful moments.<br/>Here is a bouquet for you!!</p>
         <div className="bouquet-img-wrap">
         <img
           src={require('../assets/v1058-19.jpg')}
